@@ -1,293 +1,500 @@
-<!DOCTYPE html>
-<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
-<!--[if IE 9]>    <html class="no-js ie9" lang="en"> <![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
-    <head>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN"
+"http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="" dir=""
+>
+    <head profile="">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Agricultural Information Management Standards (AIMS) | Interoperability, reusability and cooperation</title>
+                <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://aims.fao.org/blogapi/rsd" />
+<link rel="alternate" type="application/atom+xml" title="Agricultural Information Management Standards (AIMS) Atom" href="http://aims.fao.org/atom/feed" />
+<link rel="shortcut icon" href="/sites/default/files/aimsnew_favicon.gif" type="image/x-icon" />
+        <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
 
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>AK-Finder</title>
-        <!--[if (gte IE 6)&(lte IE 8)]>
-                <script type="text/javascript" src="js/selectivizr-min.js"></script>
-        <![endif]-->
+<!---------------------------------- start item related-->
 
-        <link rel="stylesheet" href="style/reset.css" />
-        <link href="http://fonts.googleapis.com/css?family=Signika" rel='stylesheet' type='text/css'>
-
-        <!-- more css -->
-        <link rel="stylesheet" href="style/select2.css" />
-        <link rel="stylesheet" href="style/jMenu.jquery.css" />
-        <link rel="stylesheet" href="style/layerslider.css" />
-        <link rel="stylesheet" href="style/jquery.jscrollpane.css" />
-        <link rel="stylesheet" href="style/style.css" />
-
-
-        <!--[if !IE 7]>
-                <style type="text/css">
-                        #wrap {display:table;height:100%}
-                </style>
-        <![endif]-->
-
-
-
-        <script type="text/javascript" src="js/ariadne-json.js"></script>
-        <script type="text/javascript" src="js/experiment.js"></script>
+            <!-- more css -->
+            <link rel="stylesheet" href="style/select2.css" />
+            <link rel="stylesheet" href="style/style.css" />
             
-        <script type="text/javascript">
+        <script type="text/javascript" src="js/ariadne-json.js"></script>
+        
+        
+            <script type="text/javascript">
             function getItem()
             {
-                //getItemJSONP('http://83.212.96.169:8080/akifRetriever/getAKIF?ids='+location.search.split("=")[1]);
-                experiment('http://83.212.96.169:8080/akifRetriever/getAKIF?ids='+location.search.split("=")[1]);
+                getItemJSONP('http://83.212.96.169:8080/akifRetriever/getAKIF?ids='+location.search.split("=")[1]);
+                //experiment('http://83.212.96.169:8080/akifRetriever/getAKIF?ids='+location.search.split("=")[1]);
             }
-        </script>
-
+            </script>
+<!---------------------------------- end item related-->
+            
+            
+            
+            
+        
+        
+        
+        <link type="text/css" rel="stylesheet" media="all" href="style/parent-style.css" />
     </head>
-
-    <body class="innerpage listingpage" onload="getItem()" >
-        <section id="wrap">
-
-			<header id="mainheader">
-                <aside id="panel" class="clearfix">
-                    <section class="clearfix">
-                        <article class="clearfix">
-                            <h3>Text Size</h3>
-                            <div id="resizefonts"></div>
-                            <span id="resizefonts_amount" class="amount"></span>
-                        </article>
-                        <article class="clearfix">
-                            <h3>Line Spacing</h3>
-                            <div id="linespacing"></div>
-                            <span id="linespacing_amount" class="amount"></span>
-                        </article>
-                        <label>
-                            <span>Font Type</span>
-                            <select id="font-selector">
-                                <option value="arial">Arial</option>
-                                <option value="tahoma">Tahoma</option>
-                                <option value="helvetica">Helvtica</option>
-                            </select>
-                        </label>
-                    </section>
-                    <div class="brownline"></div>
-                    <a href="#" id="paneltrigger" class="floatright">panel</a>
-                </aside>
-                
-				<!--TOP VERTICAL LOGO-
-                 <div class="clearfix">
-					<a href="#" class="logo">AK-Finder</a>
-				</div>-->
-            </header>
-            
-            
-            
-            
-			<section id="main">
-                <section id="search">
-                    <div class="leftsidelogo">
-                    </div>
-                    
-                    <div class="moduletable_mainsearch">
-                        <div>
-                            <form name="searchForm" id="searchForm" action="" method="post" onsubmit="doSearch(); return false;">
-                                <div>
-                                    <input type="text" name="query" id="query" class="withplaceholder" placeholder="Search..." />
-                                </div>
-                                <!--<input type="submit" value="submit" />-->
-                            </form>
-                        </div>
-                    </div>
-                </section>
-
-            <section id="main">
-                <div class="inner">
-
-                    <div class="twocols clearfix">
-
-                        <aside class="leftSidebarInfo">
-                            <div class="clearfix">
-
-                                <ul class="floatleft cleanList">
-                                    <h2>More Info</h2>
-
-                                    <li class="cleanRow">
-                                        <span>Language:</span>
-                                        <nav class="inline-nav" id="itemLanguage">
-                                        </nav>
-                                    </li>
-                                    <li class="cleanRow">
-                                        <span>Educational Context:</span>
-                                        <nav class="inline-nav" id="itemEducationalContext">
-
-                                        </nav>
-                                    </li>
-                                    <li class="cleanRow">
-                                        <span>Resource Type:</span>
-                                        <nav class="inline-nav" id="itemResourceType">
-
-                                        </nav>
-                                    </li>
-                                    <li class="cleanRow">
-                                        <span>Intended Audience:</span>
-                                        <nav class="inline-nav" id="itemIntendedAudience">
-
-                                        </nav>
-                                    </li>
-                                    <li class="cleanRow">
-                                        <span>Typical Age Range:</span>
-                                        <nav class="inline-nav" id="itemAgeRange">
-
-                                        </nav>
-                                    </li>
-                                    <li class="cleanRow">
-                                        <span>Collection:</span>
-                                        <nav class="inline-nav" id="itemCollection">
-
-                                        </nav>
-                                    </li>
-                                    <li class="cleanRow">
-                                        <span>Media Format:</span>
-                                        <nav class="inline-nav" id="itemMediaFormat">
-
-                                        </nav>
-                                    </li>
-                                </ul>
-                            </div>
-
-                        </aside>
-
-
-
-                        <section class="itemview">
-                           <!-- <a href="javascript:window.history.back();" class="backbutton secondary">Back</a>-->
-                            <article class="item-main">
-                                <header>
-                                    <h1 id="itemTitle"></h1>
-                                    <!--<img src="style/images/copyright_sample.png" alt="image" />-->
-                                </header>
-                                <div class="item-content">
-                                    <div>
-                                        <p class="itemDescription" id="itemDescription"></p>
-                                        
-                                    </div>
-                                    <div id="itemThumb"></div>
-
-                                    <div class="clearfix">
-                                        <!--<div id="keywords"></div>-->
-                                        <div><ul class="itemKeywords"><li><span>Keywords:</span><nav id="itemKeywords" class="inline-nav clearfix"> <!--auto-generated--></nav></li></ul></div>
-                                        <div style="position: relative; top: 7px;">
-                                            <ul>
-                                                <li id="itemRights">
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        
-                                        <div class="floatright"><a href="mailto:info@agroknow.gr?Subject=Green%20Learning%20Network" class="reportaproblem  secondary">Report a problem</a></div>
-                                        <div class="floatright" style="margin-right: 15px;" id="itemAccess"></div>
-                                    </div>
-
-                                </div>
-                            </article>
-                           <!-- <a href="javascript:window.history.back();" class="backbutton secondary">Back</a>-->
-                        </section>
+    
+    
+    <body onload="getItem()">
+      <div id="page">
+        <div id="above_header" class="clear-block">
+            <div id="block-locale-0" class="clear-block block block-locale">
+  <div class="content"><ul><li class="en first active"><a href="/" class="language-link active">english</a></li>
+<li class="fr"><a href="/fr" class="language-link">français</a></li>
+<li class="es"><a href="/es" class="language-link">español</a></li>
+<li class="ar"><a href="/ar" class="language-link">العربية</a></li>
+<li class="zh-hans last"><a href="/zh-hans" class="language-link">中文</a></li>
+</ul></div>
+</div>
+        </div>
+        <div id="whole">
+                        <div id="left-column">
+                                <a href="http://www.fao.org/index_en.htm" title="FAO Home"><img src="style/images/logo.gif" alt="FAO Home" /></a>
+                                <div id="sidebar-left">
+                    <div id="block-views--exp-aims_search-panel_pane_1" class="clear-block block block-views">
+  <div class="content">
+      
+      
+      
+</div>
+</div>
+<div id="block-menu_block-1" class="clear-block block block-menu_block">
+  <div class="content"><div class="menu-block-1 menu-name-primary-links parent-mlid-0 menu-level-1">
+  <ul class="menu"><li class="leaf first menu-mlid-60797 active active-trail"><a href="/" title="" class="active-trail active">Home</a></li>
+<li class="collapsed menu-mlid-60809"><a href="/news-events" title="">News &amp; Events</a></li>
+<li class="collapsed menu-mlid-62394"><a href="/advice/open-access" title="">Open Access</a></li>
+<li class="collapsed menu-mlid-60812"><a href="/advice/controlled-vocabularies" title="">Vocabularies</a></li>
+<li class="collapsed menu-mlid-60830"><a href="/advice-and-capacity-development/metadata-standards" title="">Metadata</a></li>
+<li class="collapsed menu-mlid-60834"><a href="/advice-and-capacity-development/tools" title="">Tools</a></li>
+<li class="collapsed menu-mlid-61978"><a href="/advice/linked-data" title="">Linked Data</a></li>
+<li class="leaf menu-mlid-62587"><a href="/welcome-aims-community-portal" title="">Community</a></li>
+<li class="leaf menu-mlid-65142"><a href="/questions-and-answers" title="">Questions and Answers</a></li>
+<li class="collapsed last menu-mlid-60853"><a href="/about" title="">About AIMS</a></li>
+</ul></div>
+    
+</div>
+</div>
+                </div>
+            </div>
+                        <div id="main-column" class="container_4">
+                <div id="header">
+                    <div id="logo" class="grid_2">
+                                                    <h1 class='site-name'><a href="/" title="Home">Agricultural Information Management Standards (AIMS)</a></h1>
+                                            </div>
+                    <div id="user-box" class="grid_2">
+                      <div id="block-aims_blocks-aims-user-menu" class="clear-block block block-aims_blocks">
+  <div class="content"><form action="/"  accept-charset="UTF-8" method="post" id="user-login">
+<div><div class="my-form-wrapper">
+  <div class="form-item" id="edit-name-wrapper">
+ <label for="edit-name">Username: <span class="form-required" title="This field is required.">*</span></label>
+ <input type="text" maxlength="60" name="name" id="edit-name" size="60" value="" class="form-text required" />
+ <div class="description">Enter your Agricultural Information Management Standards (AIMS) username.</div>
+</div>
+<div class="form-item" id="edit-pass-wrapper">
+ <label for="edit-pass">Password: <span class="form-required" title="This field is required.">*</span></label>
+ <input type="password" name="pass" id="edit-pass"  maxlength="128"  size="60"  class="form-text required" />
+ <div class="description">Enter the password that accompanies your username.</div>
+</div>
+<input type="hidden" name="form_build_id" id="form-5676abd1c1eacccd67a4e25be8491f21" value="form-5676abd1c1eacccd67a4e25be8491f21"  />
+<input type="hidden" name="form_id" id="edit-user-login" value="user_login"  />
+<input type="submit" name="op" id="edit-submit-1" value="Log in"  class="form-submit" />
+  <div id="new-password">
+    <a href="/user/password">request new password</a>  </div>
+</div>
+</div></form>
+</div>
+</div>
                     </div>
                 </div>
-            </section>
+                <!-- <div id="content">
+                    <div id="central"> -->
+                        <div id="main" class="grid_4">
+                            <div class="home-panel" >
+    
+  <div class="row1"> 
+  	<div class="panel-pane pane-custom pane-1" >
+  
+    
+<!-------------------------------------------------------- start item-->
 
+        <section id="main">
+             <div class="sorting"><a href="index.html">Home Page</a> > <a href="javascript:history.back();">Results</a> > View Item </div>
+            
+            <div class="inner">
+                
+                <div class="clearfix">
+                    
+                    
+                    <section class="itemview">
+                        <!-- <a href="javascript:window.history.back();" class="backbutton secondary">Back</a>-->
+                        <article class="item-main">
+                            <header>
+                                <h1 id="itemTitle"></h1>
+                                <!--<img src="style/images/copyright_sample.png" alt="image" />-->
+                            </header>
+                            <div class="item-content">
+                                <div>
+                                    <p class="itemDescription" id="itemDescription"></p>
+                                    
+                                </div>
+                                <div id="itemThumb"></div>
+                                
+                                <div class="clearfix">
+                                    <!--<div id="keywords"></div>-->
+                                    <div>
+                                        <ul class="itemKeywords"><li><span>Keywords:</span><nav id="itemKeywords" class="inline-nav clearfix"> <!--auto-generated--></nav></li></ul></div>
+                                    <div >
+                                        <ul style="list-style-type:none;">
+                                            <li id="itemRights">
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="floatright"><a href="mailto:info@agroknow.gr?Subject=Green%20Learning%20Network" class="reportaproblem  secondary">Report a problem</a></div>
+                                    <div class="floatright" style="margin-right: 15px;" id="itemAccess"></div>
+                                </div>
+                                
+                            </div>
+                        </article>
+                        <!-- <a href="javascript:window.history.back();" class="backbutton secondary">Back</a>-->
+                    </section>
+                    
+                    
+                    <aside class="leftSidebarInfo">
+                        <div class="clearfix">
+                            
+                            <ul>
+                                <h1>More Info</h1>
+                                
+                                <li class="cleanRow  inline-items">
+                                    <span>Language:</span>
+                                    <span   id="itemLanguage"></span>
+                                </li>
+                                <li class="cleanRow inline-items">
+                                    <span>Educational Context:</span>
+                                    <span   id="itemEducationalContext"></span>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li class="cleanRow inline-items">
+                                    <span>Resource Type:</span>
+                                    <span   id="itemResourceType"></span>
+                                </li>
+                                <li class="cleanRow inline-items">
+                                    <span>Intended Audience:</span>
+                                    <span   id="itemIntendedAudience"></span>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li class="cleanRow ">
+                                    <span>Typical Age Range:</span>
+                                    <span   id="itemAgeRange"> </span>
+                                </li>
+                                <li class="cleanRow inline-items">
+                                    <span>Collection:</span>
+                                    <span   id="itemCollection"> </span>
+                                </li>
+                                <li class="cleanRow inline-items">
+                                    <span>Media Format:</span>
+                                    <span   id="itemMediaFormat"> </span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                    </aside>
+                    
+                    
+                    
+                </div>
+            </div>
         </section>
-        <!--<footer id="mainfooter">
-			<div class="inner">
-				<nav class="clearfix credits">
-					<a href="http://www.nhmc.uoc.gr" target="_blank" class="curated">A data pool curated and maintained by</a>
-					<a href="http://www.redpanda.gr" target="_blank" class="redpanda">Designed by</a>
-                    <a href="http://www.natural-europe.eu" target="_blank" class="naturalEurope">with partial EU funding support from</a>
-				</nav>
-				<p class="aligncenter">Natural History Museum of Crete, University of Crete, Knossou Ave., P.O. Box 2208, 71409 Heraklion Crete, Greece, Tel./Fax: +30 2810-324366
-                Exhibition Halls of Natural History Museum of Crete, Sofokli Venizelou Avenue Heraklion Crete, Greece, Tel: +30 2810 282740 - Fax: +30 2810-393636</p>
-			</div>
-		</footer>-->
-
-
-        <script src="http://code.jquery.com/jquery-1.8.2.js"></script>
-        <script src="http://code.jquery.com/ui/1.9.0/jquery-ui.js"></script>
-            <!-- include Select2 plugin -->
-            <script src="js/select2.min.js"></script>
-            <script src="js/select2.js"></script>
-            
-            
-            <script type="text/javascript">
-                
-                $(document).ready(function (){
-                                  function format(state) {
-                                  if (!state.id) return state.text; // optgroup
-                                  return "<img class='flag' alt='flag' src='style/images/flag_" + state.id.toLowerCase() + ".jpg'/>" + state.text;
-                                  }
         
-                                  
-                                  
-                                  /*panel*/
-                                  jQuery("#font-selector").select2({
-                                                                   minimumResultsForSearch:100
-                                                                   })
-                                  jQuery("#lang-selector").select2({
-                                                                   minimumResultsForSearch:100,
-                                                                   dropdownCssClass:"flag",
-                                                                   formatResult: format,
-                                                                   formatSelection: format
-                                                                   })
-                                  
-                                  jQuery("#paneltrigger").click(function(event){
-                                                                event.preventDefault();
-                                                                jQuery(this).prev().prev().slideToggle("slow");
-                                                                });
-                                  
-                                  jQuery("#resizefonts").slider({
-                                                                orientation: "horizontal",
-                                                                range: "min",
-                                                                max:29,
-                                                                min:9,
-                                                                value:14,
-                                                                slide:refreshFontSize,
-                                                                change:refreshFontSize
-                                                                });
-                                  jQuery( "#resizefonts_amount" ).text( jQuery( "#resizefonts" ).slider( "value" )+"px" );
-                                  
-                                  jQuery("#linespacing").slider({
-                                                                orientation: "horizontal",
-                                                                range: "min",
-                                                                max:3.1,
-                                                                min:0.9,
-                                                                value:1,
-                                                                step:0.1,
-                                                                slide:refreshLinespacing,
-                                                                change:refreshLinespacing
-                                                                });
-                                  jQuery( "#linespacing_amount" ).text( jQuery( "#linespacing" ).slider( "value" )+"px" );
-                                  
-                                  });
-                
-                
-                function refreshFontSize() {
-                    var resizefonts = jQuery( "#resizefonts" ).slider( "value" );
-                    jQuery("#resizefonts_amount").text(resizefonts+"px");
-                    jQuery(".results article > *").css("font-size",resizefonts+"px");
-                    //console.log(resizefonts);
-                }
-                
-                
-                function refreshLinespacing() {
-                    var linespacing = jQuery( "#linespacing" ).slider( "value" );
-                    jQuery( "#linespacing_amount" ).text(linespacing+"px");
-                    //console.log(resizefonts);
-                }
-                
-                
-                
-                </script>
+<!-------------------------------------------------------- end item-->
+        
+        
+</div>   </div>
+
+  
+  </div>
+ 
+  </div>
+ <div class="clear"></div>
+</div> 
+<div class="clear"></div>                        </div>
+                 <!--    </div>
+                </div> -->
+            </div>
+
+            <div id="footer-container">
+                <div id="footer">
+                    <div id="block-panels_mini-footer" class="clear-block block block-panels_mini">
+  <div class="content"><div class="footer-panel" id="mini-panel-footer">
+  <div class="footer-top">
+      <div class="container_4">
+          <div class="grid_2 contact">
+              <div class="panel-pane pane-node" >
+  
+  
+  
+  <div class="pane-content">
+    <div id="node-108498" class="node-type-webform node">
+
+
+  
+  <div class="content clear-block">
+    Your email and your message to AIMS<form action="/"  accept-charset="UTF-8" method="post" id="webform-client-form-108498" class="webform-client-form" enctype="multipart/form-data">
+<div><div class="webform-component webform-component-email webform-container-inline" id="webform-component-e-mail"><div class="form-item" id="edit-submitted-e-mail-wrapper">
+ <label for="edit-submitted-e-mail">E-Mail: <span class="form-required" title="This field is required.">*</span></label>
+ <input class="form-text form-email required email" type="email" id="edit-submitted-e-mail" name="submitted[e_mail]" size="60" />
+</div>
+</div><div class="webform-component webform-component-textarea" id="webform-component-message"><div class="form-item" id="edit-submitted-message-wrapper">
+ <textarea cols="60" rows="5" name="submitted[message]" id="edit-submitted-message"  class="form-textarea required"></textarea>
+</div>
+</div><input type="hidden" name="details[sid]" id="edit-details-sid" value=""  />
+<input type="hidden" name="details[page_num]" id="edit-details-page-num" value="1"  />
+<input type="hidden" name="details[page_count]" id="edit-details-page-count" value="1"  />
+<input type="hidden" name="details[finished]" id="edit-details-finished" value="0"  />
+<input type="hidden" name="form_build_id" id="form-779541dca70ee5160ad0812d37ed3534" value="form-779541dca70ee5160ad0812d37ed3534"  />
+<input type="hidden" name="form_id" id="edit-webform-client-form-108498" value="webform_client_form_108498"  />
+<div id="edit-actions" class="form-actions form-wrapper"><input type="submit" name="op" id="edit-submit" value="Submit"  class="form-submit" />
+</div>
+</div></form>
+  </div>
+
+  <div class="clear-block">
+    <div class="meta">
+        </div>
+
+      </div>
+
+</div>
+  </div>
+
+  
+  </div>
+ 
+              <div class="clear"></div>
+          </div>
+          <div class="grid_1 social">
+              <div class="panel-pane pane-custom pane-5" >
+  
+      <h2 class="pane-title">get connected</h2>
+  
+  
+  <div class="pane-content">
+    <ul id="footer-get-connected">
+<li><a class="fb" href="http://www.facebook.com/pages/AIMS/143258855755076?sk=wall">Facebook</a></li>
+<li><a class="twitter" href="https://twitter.com/AIMS_Community">Twitter</a></li>
+<li><a class="youtube" href="http://www.youtube.com/user/FAOAIMSVideos">YouTube</a></li>
+<li><a class="flickr" href="http://www.flickr.com/photos/aims-fao/">Flickr</a></li>
+<li><a class="slideshare" href="http://www.slideshare.net/faoaims">Slideshare</a></li>
+</ul>  </div>
+
+  
+  </div>
+ 
+              <div class="clear"></div>
+          </div>
+          <div class="grid_1 feed">
+              <div class="panel-pane pane-custom pane-6" >
+  
+  
+  
+  <div class="pane-content">
+     <a class="orange-button" href="/user/me/edit/newsletter">subscribe to the <strong>AIMS Newsletter</strong></a> 
+<h2>Subscribe to our feeds</h2>
+<ul class="feeds">
+    <li><a href="/en/rss/news">news</a></li>
+    <li><a href="/en/rss/events">events</a></li>
+</ul>  </div>
+
+  
+  </div>
+<div class="panel-region-separator"></div><div class="panel-pane pane-block pane-menu-menu-disclaimer" >
+  
+  
+  
+  <div class="pane-content">
+    <ul class="menu"><li class="leaf first last"><a href="http://aims.fao.org/aims-website-disclaimer" title="">Disclaimer</a></li>
+</ul>  </div>
+
+  
+  </div>
+ 
+          </div>
+          <div class="clear"></div>
+      </div>
+      <div class="clear"></div>
+  </div>
+  <div class="footer-bottom">
+      <div class="container_4">
+          <div class="grid_3">
+              <div class="panel-pane pane-custom pane-2" >
+  
+  
+  
+  <div class="pane-content">
+    <a href="http://aims.fao.org"><img src="style/images/aims-logo-footer.png" width="76" height="26" /></a>
+<a  href="http://www.ciard.net/"><img src="style/images/ciard-logo-footer.png" width="60" height="26" /></a>  </div>
+
+  
+  </div>
+ 
+          </div>
+          <div class="grid_1 sitemap">
+              <div class="panel-pane pane-custom pane-3" >
+  
+  
+  
+  <div class="pane-content">
+    <a href="/site-map">site  map</a>  </div>
+
+  
+  </div>
+<div class="panel-region-separator"></div><div class="panel-pane pane-custom pane-4" >
+  
+  
+  
+  <div class="pane-content">
+    <a href="/browse/taxonomy">AIMS subjects</a>  </div>
+
+  
+  </div>
+<div class="panel-region-separator"></div><div class="panel-pane pane-block pane-menu-menu-copyright" >
+  
+  
+  
+  <div class="pane-content">
+    <ul class="menu"><li class="leaf first last"><a href="http://www.fao.org/copyright_en.htm" title="">©FAO 2012</a></li>
+</ul>  </div>
+
+  
+  </div>
+ 
+          </div>
+          <div class="clear"></div>
+      </div>
+      <div class="clear"></div>
+  </div>
+  <div class="clear"></div>
+</div> 
+</div>
+</div>
+                </div>
+            </div>
+        </div>
+              
+      </div>
+
+        
+        <!--finder javascripts--->
+        
+        <script src="http://code.jquery.com/jquery-1.8.2.js"></script>
+		<script src="http://code.jquery.com/ui/1.9.0/jquery-ui.js"></script>
+		<!-- include Select2 plugin -->
+		<script src="js/select2.min.js"></script>
+        <script src="js/select2.js"></script>
+        
+		
+    	<script type="text/javascript">
             
-
-
+			$(document).ready(function (){
+                              function format(state) {
+                              if (!state.id) return state.text; // optgroup
+                              return "<img class='flag' alt='flag' src='style/images/flag_" + state.id.toLowerCase() + ".jpg'/>" + state.text;
+                              }
+                   
+                              
+                              /*panel*/
+                              jQuery("#font-selector").select2({
+                                                               minimumResultsForSearch:100
+                                                               })
+                              jQuery("#lang-selector").select2({
+                                                               minimumResultsForSearch:100,
+                                                               dropdownCssClass:"flag",
+                                                               formatResult: format,
+                                                               formatSelection: format
+                                                               })
+                              
+                              jQuery("#paneltrigger").click(function(event){
+                                                            event.preventDefault();
+                                                            jQuery(this).prev().prev().slideToggle("slow");
+                                                            });
+                              
+                              jQuery("#resizefonts").slider({
+                                                            orientation: "horizontal",
+                                                            range: "min",
+                                                            max:29,
+                                                            min:9,
+                                                            value:14,
+                                                            slide:refreshFontSize,
+                                                            change:refreshFontSize
+                                                            });
+                              jQuery( "#resizefonts_amount" ).text( jQuery( "#resizefonts" ).slider( "value" )+"px" );
+                              
+                              jQuery("#linespacing").slider({
+                                                            orientation: "horizontal",
+                                                            range: "min",
+                                                            max:3.1,
+                                                            min:0.9,
+                                                            value:1,
+                                                            step:0.1,
+                                                            slide:refreshLinespacing,
+                                                            change:refreshLinespacing
+                                                            });
+                              jQuery( "#linespacing_amount" ).text( jQuery( "#linespacing" ).slider( "value" )+"px" );
+                              
+                              });
+            
+            
+            function refreshFontSize() {
+				var resizefonts = jQuery( "#resizefonts" ).slider( "value" );
+				jQuery("#resizefonts_amount").text(resizefonts+"px");
+				jQuery(".results article > *").css("font-size",resizefonts+"px");
+				//console.log(resizefonts);
+			}
+            
+            
+			function refreshLinespacing() {
+				var linespacing = jQuery( "#linespacing" ).slider( "value" );
+				jQuery( "#linespacing_amount" ).text(linespacing+"px");
+				//console.log(resizefonts);
+			}
+            
+            
+            
+            /*
+             * function customizeFinder() is called at initialisation time
+             * you need to change values repositoryName and serviceUrl
+             * and also the same values inside the -finder.js- !
+             */
+            $.noConflict();
+            function customizeFinder() {
+                return {
+                   
+                    /* "selectedProviders":["aglraims"],*/
+                     
+                    "externalSources": ["wp","scr","ss","gb"],
+                    "pageContainers": ['bottom','top'],
+                    "facets": ["provider","language","lrt"], 
+                    "limitFacetDisplay": {"language":["en","eng;","eng","eng; eng","el","fr","nl","de","et","hu","ro","tr"]},
+                    "maxLengthDescription":  300,
+                    "pageSize": 6,
+                    "repositoryName": "Open Educational Resources",//find this in the ariadne.properties file inside your Ariadne folder  ex."repositoryName":"AriadneNext Repository"
+                    "serviceUrl":"http://83.212.96.169:8080/OE_repos/api/ariadne/restp"
+                    
+                }
+            }
+            
+            </script>
+        
+        
+        
+        
+        
     </body>
-
 </html>
