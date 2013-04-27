@@ -1,0 +1,473 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN"
+"http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="" dir=""
+>
+    <head profile="">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Agricultural Information Management Standards (AIMS) | Interoperability, reusability and cooperation</title>
+                <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://aims.fao.org/blogapi/rsd" />
+<link rel="alternate" type="application/atom+xml" title="Agricultural Information Management Standards (AIMS) Atom" href="http://aims.fao.org/atom/feed" />
+<link rel="shortcut icon" href="/sites/default/files/aimsnew_favicon.gif" type="image/x-icon" />
+        <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+
+<!---------------------------------- start listing related-->
+        <link rel="stylesheet" href="style/reset.css" />
+        <link href="http://fonts.googleapis.com/css?family=Signika" rel='stylesheet' type='text/css'>
+            
+            <!-- more css -->
+            <link rel="stylesheet" href="style/select2.css" />
+            <link rel="stylesheet" href="style/style.css" />
+            
+            
+            
+            
+            <script type="text/javascript" src="http://yui.yahooapis.com/combo?2.8.1/build/yahoo-dom-event/yahoo-dom-event.js&2.8.1/build/container/container_core-min.js&2.8.1/build/datasource/datasource-min.js&2.8.1/build/element/element-min.js&2.8.1/build/paginator/paginator-min.js&2.8.1/build/datatable/datatable-min.js&2.8.1/build/json/json-min.js&2.8.1/build/selector/selector-min.js&2.8.1/build/layout/layout-min.js"></script>
+            
+            <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+            <SCRIPT type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></SCRIPT>
+            <SCRIPT type="text/javascript" src="js/finder-js/prototype.js"></SCRIPT>
+            <SCRIPT type="text/javascript" src="js/finder-js/jsonp.js"></SCRIPT>
+            <SCRIPT type="text/javascript" src="js/finder-js/sha1.js"></SCRIPT>
+            <SCRIPT type="text/javascript" src="js/finder-js/jaml-all.js"></SCRIPT>
+            <SCRIPT type="text/javascript" src="js/finder-js/finder.js"></SCRIPT>
+<!---------------------------------- end listing related-->           
+            
+            
+            
+            
+        
+        
+        
+        <link type="text/css" rel="stylesheet" media="all" href="style/parent-style.css" />
+    </head>
+    <body>
+      <div id="page">
+        <div id="above_header" class="clear-block">
+            <div id="block-locale-0" class="clear-block block block-locale">
+  <div class="content"><ul><li class="en first active"><a href="/" class="language-link active">english</a></li>
+<li class="fr"><a href="/fr" class="language-link">français</a></li>
+<li class="es"><a href="/es" class="language-link">español</a></li>
+<li class="ar"><a href="/ar" class="language-link">العربية</a></li>
+<li class="zh-hans last"><a href="/zh-hans" class="language-link">中文</a></li>
+</ul></div>
+</div>
+        </div>
+        <div id="whole">
+                        <div id="left-column">
+                                <a href="http://www.fao.org/index_en.htm" title="FAO Home"><img src="style/images/logo.gif" alt="FAO Home" /></a>
+                                <div id="sidebar-left">
+                    <div id="block-views--exp-aims_search-panel_pane_1" class="clear-block block block-views">
+  <div class="content">
+      
+      
+      
+</div>
+</div>
+<div id="block-menu_block-1" class="clear-block block block-menu_block">
+    
+ <!-- OLD MENU ON LEFT
+  <div class="content"><div class="menu-block-1 menu-name-primary-links parent-mlid-0 menu-level-1">
+  <ul class="menu"><li class="leaf first menu-mlid-60797 active active-trail"><a href="/" title="" class="active-trail active">Home</a></li>
+<li class="collapsed menu-mlid-60809"><a href="/news-events" title="">News &amp; Events</a></li>
+<li class="collapsed menu-mlid-62394"><a href="/advice/open-access" title="">Open Access</a></li>
+<li class="collapsed menu-mlid-60812"><a href="/advice/controlled-vocabularies" title="">Vocabularies</a></li>
+<li class="collapsed menu-mlid-60830"><a href="/advice-and-capacity-development/metadata-standards" title="">Metadata</a></li>
+<li class="collapsed menu-mlid-60834"><a href="/advice-and-capacity-development/tools" title="">Tools</a></li>
+<li class="collapsed menu-mlid-61978"><a href="/advice/linked-data" title="">Linked Data</a></li>
+<li class="leaf menu-mlid-62587"><a href="/welcome-aims-community-portal" title="">Community</a></li>
+<li class="leaf menu-mlid-65142"><a href="/questions-and-answers" title="">Questions and Answers</a></li>
+<li class="collapsed last menu-mlid-60853"><a href="/about" title="">About AIMS</a></li>
+</ul></div>-->
+    
+</div>
+</div>
+                            
+                            <!--filters-->
+                            <aside class="filter">
+                                <div id="insert_summary" ></div><!-- Results : (1 - 12 of 216) from Ajax.JSONRequest() -->
+                                <div id="search_status" ></div>
+                                
+                                <!--<div><input type="text" name="search_filter" class="search_filter" placeholder="Search results"/></div>-->
+                                <div id="insert_facets" ></div>
+                                <div class="remove_filters" style="padding: 3px 0 3px 0;">
+                                    <a href="" style="font-size:12px;" onclick="initialSearch();pagination_hide();">remove filters</a>
+                                </div>
+                                <!--<div class="links_left">
+                                    <div class="links_left_title">Powered by:</div>
+                                    <div class="links_left_content">Green Learning Network</div>
+                                    <div class="links_left_title">A data pool curated and maintained by:</div>
+                                    <div class="links_left_content">Agroknow Technologies</div>
+                                    <div class="links_left_title">Designed by:</div>
+                                    <div class="links_left_content">Red Panda</div>
+                                </div>-->
+                            </aside>
+                            <!--end filters-->
+                </div>
+            </div>
+                        <div id="main-column" class="container_4">
+                <div id="header">
+                    <div id="logo" class="grid_2">
+                                                    <h1 class='site-name'><a href="/" title="Home">Agricultural Information Management Standards (AIMS)</a></h1>
+                                            </div>
+                    <div id="user-box" class="grid_2">
+                      <div id="block-aims_blocks-aims-user-menu" class="clear-block block block-aims_blocks">
+  <div class="content"><form action="/"  accept-charset="UTF-8" method="post" id="user-login">
+<div><div class="my-form-wrapper">
+  <div class="form-item" id="edit-name-wrapper">
+ <label for="edit-name">Username: <span class="form-required" title="This field is required.">*</span></label>
+ <input type="text" maxlength="60" name="name" id="edit-name" size="60" value="" class="form-text required" />
+ <div class="description">Enter your Agricultural Information Management Standards (AIMS) username.</div>
+</div>
+<div class="form-item" id="edit-pass-wrapper">
+ <label for="edit-pass">Password: <span class="form-required" title="This field is required.">*</span></label>
+ <input type="password" name="pass" id="edit-pass"  maxlength="128"  size="60"  class="form-text required" />
+ <div class="description">Enter the password that accompanies your username.</div>
+</div>
+<input type="hidden" name="form_build_id" id="form-5676abd1c1eacccd67a4e25be8491f21" value="form-5676abd1c1eacccd67a4e25be8491f21"  />
+<input type="hidden" name="form_id" id="edit-user-login" value="user_login"  />
+<input type="submit" name="op" id="edit-submit-1" value="Log in"  class="form-submit" />
+  <div id="new-password">
+    <a href="/user/password">request new password</a>  </div>
+</div>
+</div></form>
+</div>
+</div>
+                    </div>
+                </div>
+                <!-- <div id="content">
+                    <div id="central"> -->
+                        <div id="main" class="grid_4">
+                            <div class="home-panel" >
+    
+  <div class="row1"> 
+  	<div class="panel-pane pane-custom pane-1" >
+  
+    
+<!-------------------------------------------------------- start search-->
+
+        <section id="main">
+            <div class="sorting"><a href="index.html">Home Page</a> > Results</div>
+            
+            
+            <section id="search">
+                
+                <div class="moduletable_mainsearch">
+                    <div>
+                        <form name="searchForm" id="searchForm" action="" method="post" onsubmit="doSearch(); return false;">
+                            <div>
+                                <input type="text" name="query" id="query" class="withplaceholder" placeholder="Search..." />
+                            </div>
+                            <!--<input type="submit" value="submit" />-->
+                        </form>
+                       
+                    </div>
+                </div>
+            </section>
+            
+            <div class="inner">
+
+                
+                
+                <div class="twocols clearfix">
+
+                    
+                    <section class="listing">
+                        <div id="insert_pagination_top" class="aligncenter"></div>
+                        
+                        <div id="insert_results"></div> <!--results from AJAX call-->
+                        
+                        <div id="insert_pagination_bottom" class="aligncenter"></div>
+                    </section>
+                </div>
+            </div>
+            
+            </div>
+            
+        </section>
+        
+<!-------------------------------------------------------- end search-->
+        
+        
+</div>   </div>
+
+  
+  </div>
+ 
+  </div>
+ <div class="clear"></div>
+</div> 
+<div class="clear"></div>                        </div>
+                 <!--    </div>
+                </div> -->
+            </div>
+
+            <div id="footer-container">
+                <div id="footer">
+                    <div id="block-panels_mini-footer" class="clear-block block block-panels_mini">
+  <div class="content"><div class="footer-panel" id="mini-panel-footer">
+  <div class="footer-top">
+      <div class="container_4">
+          <div class="grid_2 contact">
+              <div class="panel-pane pane-node" >
+  
+  
+  
+  <div class="pane-content">
+    <div id="node-108498" class="node-type-webform node">
+
+
+  
+  <div class="content clear-block">
+    Your email and your message to AIMS<form action="/"  accept-charset="UTF-8" method="post" id="webform-client-form-108498" class="webform-client-form" enctype="multipart/form-data">
+<div><div class="webform-component webform-component-email webform-container-inline" id="webform-component-e-mail"><div class="form-item" id="edit-submitted-e-mail-wrapper">
+ <label for="edit-submitted-e-mail">E-Mail: <span class="form-required" title="This field is required.">*</span></label>
+ <input class="form-text form-email required email" type="email" id="edit-submitted-e-mail" name="submitted[e_mail]" size="60" />
+</div>
+</div><div class="webform-component webform-component-textarea" id="webform-component-message"><div class="form-item" id="edit-submitted-message-wrapper">
+ <textarea cols="60" rows="5" name="submitted[message]" id="edit-submitted-message"  class="form-textarea required"></textarea>
+</div>
+</div><input type="hidden" name="details[sid]" id="edit-details-sid" value=""  />
+<input type="hidden" name="details[page_num]" id="edit-details-page-num" value="1"  />
+<input type="hidden" name="details[page_count]" id="edit-details-page-count" value="1"  />
+<input type="hidden" name="details[finished]" id="edit-details-finished" value="0"  />
+<input type="hidden" name="form_build_id" id="form-779541dca70ee5160ad0812d37ed3534" value="form-779541dca70ee5160ad0812d37ed3534"  />
+<input type="hidden" name="form_id" id="edit-webform-client-form-108498" value="webform_client_form_108498"  />
+<div id="edit-actions" class="form-actions form-wrapper"><input type="submit" name="op" id="edit-submit" value="Submit"  class="form-submit" />
+</div>
+</div></form>
+  </div>
+
+  <div class="clear-block">
+    <div class="meta">
+        </div>
+
+      </div>
+
+</div>
+  </div>
+
+  
+  </div>
+ 
+              <div class="clear"></div>
+          </div>
+          <div class="grid_1 social">
+              <div class="panel-pane pane-custom pane-5" >
+  
+      <h2 class="pane-title">get connected</h2>
+  
+  
+  <div class="pane-content">
+    <ul id="footer-get-connected">
+<li><a class="fb" href="http://www.facebook.com/pages/AIMS/143258855755076?sk=wall">Facebook</a></li>
+<li><a class="twitter" href="https://twitter.com/AIMS_Community">Twitter</a></li>
+<li><a class="youtube" href="http://www.youtube.com/user/FAOAIMSVideos">YouTube</a></li>
+<li><a class="flickr" href="http://www.flickr.com/photos/aims-fao/">Flickr</a></li>
+<li><a class="slideshare" href="http://www.slideshare.net/faoaims">Slideshare</a></li>
+</ul>  </div>
+
+  
+  </div>
+ 
+              <div class="clear"></div>
+          </div>
+          <div class="grid_1 feed">
+              <div class="panel-pane pane-custom pane-6" >
+  
+  
+  
+  <div class="pane-content">
+     <a class="orange-button" href="/user/me/edit/newsletter">subscribe to the <strong>AIMS Newsletter</strong></a> 
+<h2>Subscribe to our feeds</h2>
+<ul class="feeds">
+    <li><a href="/en/rss/news">news</a></li>
+    <li><a href="/en/rss/events">events</a></li>
+</ul>  </div>
+
+  
+  </div>
+<div class="panel-region-separator"></div><div class="panel-pane pane-block pane-menu-menu-disclaimer" >
+  
+  
+  
+  <div class="pane-content">
+    <ul class="menu"><li class="leaf first last"><a href="http://aims.fao.org/aims-website-disclaimer" title="">Disclaimer</a></li>
+</ul>  </div>
+
+  
+  </div>
+ 
+          </div>
+          <div class="clear"></div>
+      </div>
+      <div class="clear"></div>
+  </div>
+  <div class="footer-bottom">
+      <div class="container_4">
+          <div class="grid_3">
+              <div class="panel-pane pane-custom pane-2" >
+  
+  
+  
+  <div class="pane-content">
+    <a href="http://aims.fao.org"><img src="style/images/aims-logo-footer.png" width="76" height="26" /></a>
+<a  href="http://www.ciard.net/"><img src="style/images/ciard-logo-footer.png" width="60" height="26" /></a>  </div>
+
+  
+  </div>
+ 
+          </div>
+          <div class="grid_1 sitemap">
+              <div class="panel-pane pane-custom pane-3" >
+  
+  
+  
+  <div class="pane-content">
+    <a href="/site-map">site  map</a>  </div>
+
+  
+  </div>
+<div class="panel-region-separator"></div><div class="panel-pane pane-custom pane-4" >
+  
+  
+  
+  <div class="pane-content">
+    <a href="/browse/taxonomy">AIMS subjects</a>  </div>
+
+  
+  </div>
+<div class="panel-region-separator"></div><div class="panel-pane pane-block pane-menu-menu-copyright" >
+  
+  
+  
+  <div class="pane-content">
+    <ul class="menu"><li class="leaf first last"><a href="http://www.fao.org/copyright_en.htm" title="">©FAO 2012</a></li>
+</ul>  </div>
+
+  
+  </div>
+ 
+          </div>
+          <div class="clear"></div>
+      </div>
+      <div class="clear"></div>
+  </div>
+  <div class="clear"></div>
+</div> 
+</div>
+</div>
+                </div>
+            </div>
+        </div>
+              
+      </div>
+
+        
+        <!--finder javascripts--->
+        
+        <script src="http://code.jquery.com/jquery-1.8.2.js"></script>
+		<script src="http://code.jquery.com/ui/1.9.0/jquery-ui.js"></script>
+		<!-- include Select2 plugin -->
+		<script src="js/select2.min.js"></script>
+        <script src="js/select2.js"></script>
+        
+		
+    	<script type="text/javascript">
+            
+			$(document).ready(function (){
+                              function format(state) {
+                              if (!state.id) return state.text; // optgroup
+                              return "<img class='flag' alt='flag' src='style/images/flag_" + state.id.toLowerCase() + ".jpg'/>" + state.text;
+                              }
+                   
+                              
+                              /*panel*/
+                              jQuery("#font-selector").select2({
+                                                               minimumResultsForSearch:100
+                                                               })
+                              jQuery("#lang-selector").select2({
+                                                               minimumResultsForSearch:100,
+                                                               dropdownCssClass:"flag",
+                                                               formatResult: format,
+                                                               formatSelection: format
+                                                               })
+                              
+                              jQuery("#paneltrigger").click(function(event){
+                                                            event.preventDefault();
+                                                            jQuery(this).prev().prev().slideToggle("slow");
+                                                            });
+                              
+                              jQuery("#resizefonts").slider({
+                                                            orientation: "horizontal",
+                                                            range: "min",
+                                                            max:29,
+                                                            min:9,
+                                                            value:14,
+                                                            slide:refreshFontSize,
+                                                            change:refreshFontSize
+                                                            });
+                              jQuery( "#resizefonts_amount" ).text( jQuery( "#resizefonts" ).slider( "value" )+"px" );
+                              
+                              jQuery("#linespacing").slider({
+                                                            orientation: "horizontal",
+                                                            range: "min",
+                                                            max:3.1,
+                                                            min:0.9,
+                                                            value:1,
+                                                            step:0.1,
+                                                            slide:refreshLinespacing,
+                                                            change:refreshLinespacing
+                                                            });
+                              jQuery( "#linespacing_amount" ).text( jQuery( "#linespacing" ).slider( "value" )+"px" );
+                              
+                              });
+            
+            
+            function refreshFontSize() {
+				var resizefonts = jQuery( "#resizefonts" ).slider( "value" );
+				jQuery("#resizefonts_amount").text(resizefonts+"px");
+				jQuery(".results article > *").css("font-size",resizefonts+"px");
+				//console.log(resizefonts);
+			}
+            
+            
+			function refreshLinespacing() {
+				var linespacing = jQuery( "#linespacing" ).slider( "value" );
+				jQuery( "#linespacing_amount" ).text(linespacing+"px");
+				//console.log(resizefonts);
+			}
+            
+            
+            
+            /*
+             * function customizeFinder() is called at initialisation time
+             * you need to change values repositoryName and serviceUrl
+             * and also the same values inside the -finder.js- !
+             */
+            $.noConflict();
+            function customizeFinder() {
+                return {
+                   
+                    /* "selectedProviders":["aglraims"],*/
+                     
+                    "externalSources": ["wp","scr","ss","gb"],
+                    "pageContainers": ['bottom','top'],
+                    "facets": ["provider","language","lrt"], 
+                    "limitFacetDisplay": {"language":["en","eng;","eng","eng; eng","el","fr","nl","de","et","hu","ro","tr"]},
+                    "maxLengthDescription":  300,
+                    "pageSize": 6,
+                    "repositoryName": "Open Educational Resources",//find this in the ariadne.properties file inside your Ariadne folder  ex."repositoryName":"AriadneNext Repository"
+                    "serviceUrl":"http://83.212.96.169:8080/OE_repos/api/ariadne/restp"
+                    
+                }
+            }
+            
+            </script>
+        
+        
+        
+        
+        
+    </body>
+</html>
