@@ -15,7 +15,7 @@ h1, h2, h3, h4, p { margin:0 0 5px 0; padding:0; }
 h1 { font-size:20px; font-weight:normal; color:#41647b; }
 h2 { font-size:17px; font-weight:normal; color:#41647b; }
 h3, h4 { font-size:14px; font-weight:normal; color:#41647b; }
-p { line-height:1.5em }
+
 
 h3 {
 	font-size:24px;
@@ -1246,7 +1246,7 @@ a.backbutton {
 }
 
 .item-content > div.clearfix {
-	margin-top:45px;
+	margin-top:10px;
 	padding-bottom:11px;
 	border-bottom:1px solid #ececec;
 	position:relative;
@@ -1605,11 +1605,13 @@ a.disabled {
 
 /*Left Sidebar in item*/
 .leftSidebarInfo {
-    margin-top:25px;
+    margin:0px 5px 15px 10px;
 	width:100%;
 	background:none;
     font-size:13px;
-    border-top:1px solid #ccc;
+    border-left:1px solid #ccc;
+    width:160px;
+    float:left;
     
 }
 
@@ -1618,18 +1620,14 @@ a.disabled {
     list-style-type: none;
     margin:0px;
     padding:0px;
-    width:780px;
 }
 
-.inline-items {
-	display:inline;
+.leftSidebarInfo ul li{
+    margin:0px;
+    padding-left:5px;
 }
 
 
-.cleanRow
-{
-    padding: 7px 0px 3px 0px;
-}
 
 .itemsMedia
 {
@@ -1643,7 +1641,7 @@ a.disabled {
 .itemDescription
 {
     float:left;
-    width:550px;
+    width:565px;
     min-height: 200px;
 }
 
