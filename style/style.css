@@ -1610,7 +1610,7 @@ a.disabled {
 	background:none;
     font-size:13px;
     border-left:1px solid #ccc;
-    width:175px;
+    width:255px;
     float:left;
     
 }
@@ -1620,6 +1620,7 @@ a.disabled {
     list-style-type: none;
     margin:0px;
     padding:0px;
+    text-align: left;
 }
 
 .leftSidebarInfo ul li{
@@ -1641,7 +1642,7 @@ a.disabled {
 .itemDescription
 {
     float:left;
-    width:565px;
+    width:475px;
     min-height: 200px;
     font-size:13px;
 }
