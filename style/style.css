@@ -1610,7 +1610,7 @@ a.disabled {
 	background:none;
     font-size:13px;
     border-left:1px solid #ccc;
-    width:160px;
+    width:175px;
     float:left;
     
 }
@@ -1643,6 +1643,7 @@ a.disabled {
     float:left;
     width:565px;
     min-height: 200px;
+    font-size:13px;
 }
 
 .itemKeywords
