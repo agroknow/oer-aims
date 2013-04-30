@@ -1009,7 +1009,7 @@ body.innerpage #main {
 
 .listing {
 	margin-top:15px;
-    width:780px;
+    width:770px;
     padding-left:5px;
     padding-bottom:50px;
     
@@ -1210,7 +1210,7 @@ a.backbutton {
 
 .itemview {
 	margin-top:15px;
-	width:810px;
+	width: 780px;
 }
 .item-main {
 	margin:17px 0;
