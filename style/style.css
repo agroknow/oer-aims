@@ -80,7 +80,6 @@ body:before {
     padding-top:0px;
     float:left;
     /*min-width:1014px;*/
-    background-image:url(images/back_dots.png);
 }
 
 /*SEARCH*/
@@ -236,7 +235,7 @@ header#mainheader {
 {
     /*padding-top:10px;*/
     padding-top:20px;
-    margin:10px 0px 0px 130px;
+    margin:10px 0 10px 50px;
     float:left;
 }
 
@@ -572,17 +571,19 @@ nav #jMenu li ul li a:hover {
 
 #search_terms /*indicator of result in left menu */
 {
-    color:white;
+    font-size: 14px;
+    color:gray;
 }
 
 #insert_summary /*indicator of result in left menu*/
 {
-    margin:0px 0px 0px 10px;
+    margin:20px 0 0 10px;
 }
 
 #search_status /*indicator of processing time in left menu*/
 {
-    color:white;
+    font-size: 14px;
+    color:gray;
     margin:10px 0px 5px 10px;
 }
 
@@ -605,7 +606,7 @@ nav #jMenu li ul li a:hover {
 }
 
 div.twocols > * {
-	float:left; /*changed from right to left*/
+	float:right; 
     
 }
 div.twocols > *:first-child {
@@ -800,12 +801,10 @@ body.innerpage #main {
 
 .filter {
 	width:160px;
-	background:background: #E9EEF4;
+	background: none;
     margin-bottom:30px;
-
-	-webkit-border-radius:0 0 4px 4px;
-	-moz-border-radius:0 0 4px 4px;
-	border-radius:0 0 4px 4px;
+    /*border-left:#E0E0E0 1px solid;*/
+    margin-top:25px;
 }
 .filter a
 {
@@ -912,7 +911,7 @@ body.innerpage #main {
 	right:0;
 	top:0;
 	line-height:16px;
-	margin:7px 10px 0 0;
+	margin:7px 0 0 0;
 	padding:0px 8px;
 	/*border:1px solid #20272d;*/
 	-webkit-border-radius:4px;
@@ -1009,7 +1008,7 @@ body.innerpage #main {
 
 .listing {
 	margin-top:15px;
-    width:770px;
+    width:610px;
     padding-left:5px;
     padding-bottom:50px;
     

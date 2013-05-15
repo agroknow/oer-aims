@@ -259,7 +259,7 @@ function initializeFinder(){
 		if (!$('insert_summary')) {
 			$('body').insert('<div id="insert_summary" style="display:none"></div>');
 		}
-		$('insert_summary').update('<div id="summary"><div id="search_title" ><span id="search_terms"></span> <strong><span id="search_results_index"></span></strong></div></div>');
+		$('insert_summary').update('<div id="summary"><div id="search_title" ><span id="search_terms"></span> <span id="search_results_index"></span></div></div>');
         
 		if (!$('insert_facets')) {
 			$('body').insert('<div id="insert_facets" style="display:none"></div>');
