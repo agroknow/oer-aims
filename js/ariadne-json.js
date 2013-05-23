@@ -147,7 +147,8 @@ function getItemJSONP(urlTemp)
                 
                 }
                 }
-                if(arrayWithJSONS[0].tokenBlock.contexts.length!==undefined)
+                
+                if(arrayWithJSONS[0].tokenBlock.contexts!==undefined)
                 {
                 for(var j=0; j<arrayWithJSONS[0].tokenBlock.contexts.length;j++)//*ARRAY of keywords in current version
                 {
@@ -321,7 +322,7 @@ function getItemJSONP(urlTemp)
                 
                 }
                 }
-                if(arrayWithJSONS[0].tokenBlock.contexts.length!==undefined)
+                if(arrayWithJSONS[0].tokenBlock.contexts!==undefined)
                 {
                 for(var j=0; j<arrayWithJSONS[0].tokenBlock.contexts.length;j++)//*ARRAY of keywords in current version
                 {
