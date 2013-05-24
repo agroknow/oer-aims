@@ -31,8 +31,18 @@ function getItemJSONP(urlTemp)
                 //document.getElementById('itemDescription').innerHTML = languageBlock.description;
                 if(languageBlock.title!==undefined)
                 {
-                document.getElementById('itemTitle').innerHTML = languageBlock.title ;
+                var thisTitle = languageBlock.title;
+                
+                if(arrayWithJSONS[0].expressions[0].manifestations[0].items[0].url!==undefined)
+                {
+                
+                thisTitle = "<a target=\"_blank\" href=\""+arrayWithJSONS[0].expressions[0].manifestations[0].items[0].url+"\">"+languageBlock.title+"</a>"
+                
                 }
+                
+                document.getElementById('itemTitle').innerHTML =  thisTitle;
+                }
+                
                 if(languageBlock.description!==undefined)
                 {
                 document.getElementById('itemDescription').innerHTML = languageBlock.description;
@@ -41,6 +51,8 @@ function getItemJSONP(urlTemp)
                 if(arrayWithJSONS[0].expressions[0].manifestations[0].items[0].url!==undefined)
                 {
                 jQuery('#itemAccess').append('<a target="_blank" href="'+arrayWithJSONS[0].expressions[0].manifestations[0].items[0].url+'" class="access  secondary">Access to the resource</a>');
+                }
+                
                 if(arrayWithJSONS[0].expressions[0].manifestations[0].parameter!==undefined)
                 {
                 if(arrayWithJSONS[0].expressions[0].manifestations[0].parameter=='text/html'){
@@ -76,7 +88,7 @@ function getItemJSONP(urlTemp)
                 jQuery('#itemThumb').append('<a href="'+arrayWithJSONS[0].expressions[0].manifestations[0].items[0].url+'"><img class="itemsMedia" src="http://open.thumbshots.org/image.aspx?url='+arrayWithJSONS[0].expressions[0].manifestations[0].items[0].url+'" /> </a>');
                 
                 }
-                }
+                
                 if(arrayWithJSONS[0].expressions[0].manifestations[0].parameter!==undefined)
                 {
                 jQuery('#itemMediaFormat').append('<span class="forKomma last">'+arrayWithJSONS[0].expressions[0].manifestations[0].parameter+'</span>');
@@ -187,12 +199,10 @@ function getItemJSONP(urlTemp)
                 
                 
                 
-//--
-                //if languageBlocks has ONLY one value => not array
+//--            //if languageBlocks has ONLY one value => not array
                 if(arrayWithJSONS[0].languageBlocks.length==undefined && arrayWithJSONS[0].languageBlocks!==undefined )
                 {
                 var language = Object.keys(arrayWithJSONS[0].languageBlocks); //keys for different language versions of this item. (i.e en, gr, no,)
-                
                 /////get always language "en" else the first one
                 if(arrayWithJSONS[0].languageBlocks['en']==undefined){
                 languageBlock = arrayWithJSONS[0].languageBlocks[language[0]]; // We always get language[0] as key
@@ -205,8 +215,17 @@ function getItemJSONP(urlTemp)
                 //document.getElementById('itemDescription').innerHTML = languageBlock.description;
                 if(languageBlock.title!==undefined)
                 {
-                document.getElementById('itemTitle').innerHTML = languageBlock.title ;
+                var thisTitle = languageBlock.title;
+                
+                if(arrayWithJSONS[0].expressions[0].manifestations[0].items[0].url!==undefined)
+                {
+                thisTitle = "<a target=\"_blank\" href=\""+arrayWithJSONS[0].expressions[0].manifestations[0].items[0].url+"\">"+languageBlock.title+"</a>"
+                
                 }
+                document.getElementById('itemTitle').innerHTML = thisTitle ;
+                }
+                
+                
                 if(languageBlock.description!==undefined)
                 {
                 document.getElementById('itemDescription').innerHTML = languageBlock.description;
@@ -216,6 +235,8 @@ function getItemJSONP(urlTemp)
                 if(arrayWithJSONS[0].expressions[0].manifestations[0].items[0].url!==undefined)
                 {
                 jQuery('#itemAccess').append('<a target="_blank" href="'+arrayWithJSONS[0].expressions[0].manifestations[0].items[0].url+'" class="access  secondary">Access to the resource</a>');
+                }
+                
                 if(arrayWithJSONS[0].expressions[0].manifestations[0].parameter!==undefined)
                 {
                 if(arrayWithJSONS[0].expressions[0].manifestations[0].parameter=='text/html'){
@@ -251,7 +272,7 @@ function getItemJSONP(urlTemp)
                 jQuery('#itemThumb').append('<a href="'+arrayWithJSONS[0].expressions[0].manifestations[0].items[0].url+'"><img class="itemsMedia" src="http://open.thumbshots.org/image.aspx?url='+arrayWithJSONS[0].expressions[0].manifestations[0].items[0].url+'" /> </a>');
                 
                 }
-                }
+                
                 if(arrayWithJSONS[0].expressions[0].manifestations[0].parameter!==undefined)
                 {
                 jQuery('#itemMediaFormat').append('<span class="forKomma last">'+arrayWithJSONS[0].expressions[0].manifestations[0].parameter+'</span>');

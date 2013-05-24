@@ -566,6 +566,7 @@ nav #jMenu li ul li a:hover {
 	line-height:40px;
 	color:#a03a67;
     padding-left:20px;
+    font-size: 14px;
     
 }
 
@@ -1220,6 +1221,9 @@ a.backbutton {
 	width:620px;
 	display:inline-block;
 	line-height:1.2em;
+    font-size: 18px;
+    border-bottom: 4px solid #FBB329;
+    color: #222222;
 }
 .item-main header img {
 	float:right;
@@ -1607,7 +1611,7 @@ a.disabled {
     margin:0px 5px 15px 10px;
 	width:100%;
 	background:none;
-    font-size:13px;
+    font-size:12px;
     border-left:1px solid #ccc;
     width:255px;
     float:left;
