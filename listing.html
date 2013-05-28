@@ -128,6 +128,27 @@
         <section id="main">
             <div class="sorting"><a href="index.html">Home Page</a> > Results</div>
             
+            <!--filters-->
+            <aside class="filter">
+                <div id="insert_summary" ></div><!-- Results : (1 - 12 of 216) from Ajax.JSONRequest() -->
+                <div id="search_status" ></div>
+                
+                <!--<div><input type="text" name="search_filter" class="search_filter" placeholder="Search results"/></div>-->
+                <div id="insert_facets" ></div>
+                <div class="remove_filters" style="padding: 3px 0 3px 0;">
+                    <a href="" style="font-size:12px;" onclick="initialSearch();pagination_hide();">remove filters</a>
+                </div>
+                <!--<div class="links_left">
+                 <div class="links_left_title">Powered by:</div>
+                 <div class="links_left_content">Green Learning Network</div>
+                 <div class="links_left_title">A data pool curated and maintained by:</div>
+                 <div class="links_left_content">Agroknow Technologies</div>
+                 <div class="links_left_title">Designed by:</div>
+                 <div class="links_left_content">Red Panda</div>
+                 </div>-->
+            </aside>
+            <!--end filters-->
+            
             
             <section id="search">
                 
@@ -158,30 +179,13 @@
                         
                         <div id="insert_pagination_bottom" class="aligncenter"></div>
                     </section>
-                    
-                    
-                    <!--filters-->
-                    <aside class="filter">
-                        <div id="insert_summary" ></div><!-- Results : (1 - 12 of 216) from Ajax.JSONRequest() -->
-                        <div id="search_status" ></div>
-                        
-                        <!--<div><input type="text" name="search_filter" class="search_filter" placeholder="Search results"/></div>-->
-                        <div id="insert_facets" ></div>
-                        <div class="remove_filters" style="padding: 3px 0 3px 0;">
-                            <a href="" style="font-size:12px;" onclick="initialSearch();pagination_hide();">remove filters</a>
-                        </div>
-                        <!--<div class="links_left">
-                         <div class="links_left_title">Powered by:</div>
-                         <div class="links_left_content">Green Learning Network</div>
-                         <div class="links_left_title">A data pool curated and maintained by:</div>
-                         <div class="links_left_content">Agroknow Technologies</div>
-                         <div class="links_left_title">Designed by:</div>
-                         <div class="links_left_content">Red Panda</div>
-                         </div>-->
-                    </aside>
-                    <!--end filters-->
+
                 </div>
             </div>
+            
+            
+            
+
             
             </div>
       
@@ -190,10 +194,10 @@
 
       
         </section>
-        
+      
 <!-------------------------------------------------------- end search-->
       
-            
+      
 </div>   </div>
 
   

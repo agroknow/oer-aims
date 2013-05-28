@@ -72,7 +72,7 @@ body:before {
 }
 
 .inner {
-	width:100%;
+	width:600px;
 	margin:0 auto;
 }
 #main > .inner {
@@ -235,7 +235,7 @@ header#mainheader {
 {
     /*padding-top:10px;*/
     padding-top:20px;
-    margin:10px 0 10px 50px;
+    margin:20px 0 10px 50px;
     float:left;
 }
 
@@ -591,6 +591,7 @@ nav #jMenu li ul li a:hover {
 .left_details /*details of the above items (results & processing time)*/
 {
     color:#62a6d3;
+    font-size: 13px;
 }
 /*-----*/
 
@@ -806,6 +807,7 @@ body.innerpage #main {
     margin-bottom:30px;
     /*border-left:#E0E0E0 1px solid;*/
     margin-top:25px;
+    float:right;
 }
 .filter a
 {
@@ -1590,7 +1592,7 @@ a.disabled {
 
 .access, .reportaproblem {
 	padding:35px 0 0 0;
-	margin:22px 0 0 0px;
+	margin:0;
 	background-position:center top;
 	background-repeat:no-repeat;
 	display:inline-block;
@@ -1652,7 +1654,7 @@ a.disabled {
 
 .itemKeywords
 {
-    width:550px;
+    width:480px;
 }
 
 .itemKeywords li
@@ -1671,6 +1673,7 @@ a.disabled {
 
 .forKomma{
     color:#41647b;
+    font-size: 13px;
 }
 .forKomma:after{
     color:#41647b;
