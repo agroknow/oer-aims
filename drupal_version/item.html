@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<html dir="" lang="" xml:lang="" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+  <!-- more css -->
+  <link href="style/select2.css" rel="stylesheet" />
+  <link href="style/style.less" rel="stylesheet" />
+  <script src="js/less.js" type="text/javascript"></script>
+  <script type="text/javascript">
+
+      function getItem()
+      {
+        getItemJSONP('http://54.228.180.124:8080/akifRetriever/getAKIF?ids='+location.search.split("=")[1]);
+      }
+  </script>
+  <link href="style/parent-style.css" media="all" rel="stylesheet" type=
+  "text/css" />
+
+  <title></title>
+</head>
+
+<body onload="getItem()">
+  <!--====================================================== start item-->
+
+  <section id="main">
+    <div class="sorting">
+      <a href="index.html">Home Page</a> &gt; <a href=
+      "javascript:history.back();">Results</a> &gt; View Item
+    </div>
+
+    <div class="inner">
+      <div class="clearfix">
+        <section class="itemview">
+          <article class="item-main">
+            <header>
+              <h1 id="itemTitle"></h1>
+            </header>
+
+            <div class="item-content">
+
+              <div class="leftSidebarInfo">
+                <ul>
+                  <li><span>Language:</span> <span id=
+                  "itemLanguage"></span></li>
+
+                  <li><span>Educational Context:</span> <span id=
+                  "itemEducationalContext"></span></li>
+
+                  <li><span>Resource Type:</span> <span id=
+                  "itemResourceType"></span></li>
+
+                  <li><span>Intended Audience:</span> <span id=
+                  "itemIntendedAudience"></span></li>
+
+                  <li class="cleanRow"><span>Typical Age Range:</span>
+                  <span id="itemAgeRange"></span></li>
+
+                  <li><span>Collection:</span> <span id=
+                  "itemCollection"></span></li>
+
+                  <li><span>Media Format:</span> <span id=
+                  "itemMediaFormat"></span></li>
+                </ul>
+              </div>
+
+              <div>
+                <p class="itemDescription" id="itemDescription"></p>
+              </div>
+
+              <div class="clearfix">
+                <div class="floatright">
+                  <a class="reportaproblem secondary" href=
+                  "mailto:info@agroknow.gr?Subject=Green%20Learning%20Network">Report
+                  a problem</a>
+                </div>
+
+                <div class="floatright" id="itemAccess" style=
+                "margin-right: 15px;"></div>
+
+                <div>
+                  <ul class="itemKeywords">
+                    <li>
+                      <span>Keywords:</span>
+
+                      <nav class="inline-nav clearfix" id="itemKeywords">
+                        <!--auto-generated-->
+                      </nav>
+                    </li>
+                  </ul>
+                </div>
+
+                <div>
+                  <ul style="list-style-type:none; margin-bottom:0px">
+                    <li id="itemRights"></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </article>
+        </section>
+      </div>
+    </div>
+  </section>
+  <!--====================================================== end item-->
+  <!--javascripts=-->
+  <script src="http://code.jquery.com/jquery-1.8.2.js"></script>
+  <script src="js/ariadne-json.js" type="text/javascript"></script>
+</body>
+</html>

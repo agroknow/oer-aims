@@ -1,0 +1,190 @@
+<!DOCTYPE html SYSTEM "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
+
+<html dir="" lang="" xml:lang="" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+  <!--================================ start listing related-->
+  <link href="style/reset.css" rel="stylesheet" />
+  <link href="http://fonts.googleapis.com/css?family=Signika" rel='stylesheet'
+  type='text/css' /><!-- more css -->
+  <link href="style/select2.css" rel="stylesheet" />
+  <link href="style/style.less" rel="stylesheet" />
+  <script src="js/less.js" type="text/javascript"></script>
+
+
+  <script src=
+  "http://yui.yahooapis.com/combo?2.8.1/build/yahoo-dom-event/yahoo-dom-event.js&amp;2.8.1/build/container/container_core-min.js&amp;2.8.1/build/datasource/datasource-min.js&amp;2.8.1/build/element/element-min.js&amp;2.8.1/build/paginator/paginator-min.js&amp;2.8.1/build/datatable/datatable-min.js&amp;2.8.1/build/json/json-min.js&amp;2.8.1/build/selector/selector-min.js&amp;2.8.1/build/layout/layout-min.js"
+  type="text/javascript"></script>
+  <script src="https://www.google.com/jsapi" type="text/javascript"></script>
+  <script src="http://code.jquery.com/jquery-1.7.2.min.js" type=
+  "text/javascript"></script>
+  <script src="js/finder-js/prototype.js" type="text/javascript"></script>
+  <script src="js/finder-js/jsonp.js" type="text/javascript"></script>
+  <script src="js/finder-js/sha1.js" type="text/javascript"></script>
+  <script src="js/finder-js/jaml-all.js" type="text/javascript"></script>
+  <script src="js/finder-js/finder.js" type="text/javascript"></script><!--================================ end listing related-->
+  <link href="style/parent-style.css" media="all" rel="stylesheet" type=
+  "text/css" />
+</head>
+
+<body>
+ <!--====================================================== start search-->
+
+    <section id="main">
+      <div class="sorting">
+        <a href="index.html">Home Page</a> &gt; Results
+      </div><!--filters-->
+
+       <section id="search">
+        <div class="moduletable_mainsearch">
+          <div>
+            <form action="" id="searchForm" method="post" name=
+            "searchForm" onsubmit="doSearch(); return false;">
+              <div>
+                <input class="withplaceholder" id="query" name=
+                "query" placeholder="Search..." type="text" />
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <aside class="filter">
+        <div id="insert_summary"></div>
+        <!-- Results : (1 - 12 of 216) from Ajax.JSONRequest() -->
+
+        <div id="search_status"></div>
+
+        <div id="insert_facets"></div>
+
+        <div class="remove_filters" style="padding: 3px 0 3px 0;">
+          <a href="" onclick="initialSearch();pagination_hide();"
+          style="font-size:12px;">remove filters</a>
+        </div>
+      </aside><!--end filters-->
+
+      <div class="inner">
+        <div class="twocols clearfix">
+          <section class="listing">
+            <div class="aligncenter" id="insert_pagination_top">
+            </div>
+
+            <div id="insert_results"></div>
+            <!--results from AJAX call-->
+
+            <div class="aligncenter" id="insert_pagination_bottom">
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+
+  <!--====================================================== end search-->
+
+
+  <!--finder javascripts=-->
+  <script src="http://code.jquery.com/jquery-1.8.2.js"></script> <script src="http://code.jquery.com/ui/1.9.0/jquery-ui.js"></script> <!-- include Select2 plugin -->
+  <script src="js/select2.min.js"></script> <script src="js/select2.js"></script> <script type="text/javascript">
+//<![CDATA[
+
+  $(document).ready(function (){
+    function format(state) {
+      if (!state.id) return state.text;
+      // optgroup
+      return "<img class='flag' alt='flag' src='style/images/flag_" + state.id.toLowerCase() + ".jpg'/>" + state.text;
+    }
+
+
+    /*panel*/
+    jQuery("#font-selector").select2({
+      minimumResultsForSearch:100
+    }
+                                    )
+      jQuery("#lang-selector").select2({
+        minimumResultsForSearch:100,
+        dropdownCssClass:"flag",
+        formatResult: format,
+        formatSelection: format
+      }
+                                      )
+
+        jQuery("#paneltrigger").click(function(event){
+          event.preventDefault();
+          jQuery(this).prev().prev().slideToggle("slow");
+        }
+                                     );
+
+    jQuery("#resizefonts").slider({
+      orientation: "horizontal",
+      range: "min",
+      max:29,
+      min:9,
+      value:14,
+      slide:refreshFontSize,
+      change:refreshFontSize
+    }
+                                 );
+    jQuery( "#resizefonts_amount" ).text( jQuery( "#resizefonts" ).slider( "value" )+"px" );
+
+    jQuery("#linespacing").slider({
+      orientation: "horizontal",
+      range: "min",
+      max:3.1,
+      min:0.9,
+      value:1,
+      step:0.1,
+      slide:refreshLinespacing,
+      change:refreshLinespacing
+    }
+                                 );
+    jQuery( "#linespacing_amount" ).text( jQuery( "#linespacing" ).slider( "value" )+"px" );
+
+  }
+                   );
+
+
+  function refreshFontSize() {
+    var resizefonts = jQuery( "#resizefonts" ).slider( "value" );
+    jQuery("#resizefonts_amount").text(resizefonts+"px");
+    jQuery(".results article > *").css("font-size",resizefonts+"px");
+    //console.log(resizefonts);
+  }
+
+
+  function refreshLinespacing() {
+    var linespacing = jQuery( "#linespacing" ).slider( "value" );
+    jQuery( "#linespacing_amount" ).text(linespacing+"px");
+    //console.log(resizefonts);
+  }
+
+
+
+  /*
+  * function customizeFinder() is called at initialisation time
+  * you need to change values repositoryName and serviceUrl
+  * and also the same values inside the -finder.js- !
+  */
+  $.noConflict();
+  function customizeFinder() {
+    return {
+
+      "selectedProviders":["aglraims"],
+
+      "externalSources": ["wp","scr","ss","gb"],
+      "pageContainers": ['bottom','top'],
+      "facets": ["provider","language","lrt"],
+      "limitFacetDisplay": {"language":["en","eng;","eng","eng; eng","es","el","fr","nl","de","et","hu","ro","tr"]}
+      ,
+      "maxLengthDescription":  300,
+      "pageSize": 6,
+      "repositoryName": "Open Educational Resources",//find this in the ariadne.properties file inside your Ariadne folder  ex."repositoryName":"AriadneNext Repository"
+      "serviceUrl":"http://54.228.180.124:8080/OE_Repos/api/ariadne/restp"
+
+    }
+  }
+
+  //]]>
+  </script>
+</body>
+</html>
